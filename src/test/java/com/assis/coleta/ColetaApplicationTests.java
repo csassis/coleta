@@ -48,5 +48,11 @@ class ColetaApplicationTests {
 
         org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
         org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
     }
 }
