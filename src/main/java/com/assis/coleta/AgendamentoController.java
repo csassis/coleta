@@ -16,7 +16,7 @@ public class AgendamentoController {
 
     @org.springframework.web.bind.annotation.PostMapping("/agendamento")
     public void addAgendamento(@org.springframework.web.bind.annotation.RequestBody Agendamento parametro){
-        agendamentoService.add(parametro);
+        agendamentoService.save(parametro);
     }
 
     @org.springframework.web.bind.annotation.GetMapping("/agendamento/count")

@@ -9,7 +9,7 @@ public class AgendamentoService {
         this.repository = repository;
     }
 
-    public void add(Agendamento novo){
+    public void save(Agendamento novo){
         repository.save(novo);
     }
 
