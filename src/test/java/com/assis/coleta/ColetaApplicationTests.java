@@ -26,4 +26,27 @@ class ColetaApplicationTests {
         agendamentoService.save(agendamento);
     }
 
+    @Test
+    void findAgendamentoTest(){
+        com.assis.coleta.Agendamento agendamentoUm = new com.assis.coleta.Agendamento();
+        agendamentoUm.setCliente(faker.name().name());
+        agendamentoUm.setCidade(faker.country().capital());
+        agendamentoUm.setMaterial(faker.animal().name());
+        agendamentoUm.setQuantidade(faker.number().numberBetween(1, 100));
+        agendamentoUm.setData(java.time.LocalDate.now());
+        agendamentoService.save(agendamentoUm);
+
+        com.assis.coleta.Agendamento agendamentoDois = new com.assis.coleta.Agendamento();
+        agendamentoDois.setCliente(faker.name().name());
+        agendamentoDois.setCidade(faker.country().capital());
+        agendamentoDois.setMaterial(faker.animal().name());
+        agendamentoDois.setQuantidade(faker.number().numberBetween(1, 100));
+        agendamentoDois.setData(java.time.LocalDate.now());
+        agendamentoService.save(agendamentoDois);
+
+        java.util.Iterator<Agendamento> agendamentos = agendamentoService.findAll().iterator();
+
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+        org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
+    }
 }
