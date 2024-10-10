@@ -22,7 +22,7 @@ class ColetaApplicationTests {
         agendamento.setCidade(faker.country().capital());
         agendamento.setMaterial(faker.animal().name());
         agendamento.setQuantidade(faker.number().numberBetween(1, 100));
-        agendamento.setData(java.time.LocalDate.from(faker.date().birthday(4, 1).toInstant()));
+        agendamento.setData(java.time.LocalDate.now());
         agendamentoService.add(agendamento);
     }
 
