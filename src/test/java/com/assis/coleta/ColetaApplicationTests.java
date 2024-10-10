@@ -13,6 +13,7 @@ class ColetaApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
 
     @Test
