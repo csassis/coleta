@@ -42,9 +42,3 @@ jobs:
           docker build -t coleta-docker .
           docker tag coleta-docker:latest csassis/coleta:latest
           docker push coleta-docker:latest
-
-    - name: Build and push
-      uses: docker/build-push-action@v6
-      with:
-        push: true
-        tags: csassis/coleta-docker:latest
