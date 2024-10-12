@@ -42,8 +42,8 @@ jobs:
         username: csassis
         password: dckr_pat_ErVM1L0m01HLeYqWuGPRTjGXQrM
 
-    - name: Tag
+    - name: Tag da imagem latest do coleta-docker
       run: docker tag coleta-docker:latest csassis/coleta:latest
     
-    - name: Push
-      run: docker push csassis/coleta-docker:latest
+    - name: Push da imagem para o dockerhub
+      run: docker push coleta-docker:latest
