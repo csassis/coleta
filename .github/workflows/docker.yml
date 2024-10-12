@@ -40,4 +40,4 @@ jobs:
       run: echo dckr_pat_oBMQLENabFaMo9fVrtaRYVqTfE0 | docker login -u csassis  --password-stdin
       
     - name: Push da imagem latest do coleta-docker
-      run: docker push coleta-docker:latest
+      run: docker push csassis/coleta-docker:latest
