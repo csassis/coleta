@@ -2,8 +2,6 @@
 name: Automatização da CI da coleta.
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
