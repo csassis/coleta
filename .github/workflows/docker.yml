@@ -42,5 +42,8 @@ jobs:
           username: csassis
           password: dckr_pat_oBMQLENabFaMo9fVrtaRYVqTfE0
 
-    - name: Push da imagem para o dockerhub
-      run: docker push coleta-docker:latest
+    - name: Build and push
+      uses: docker/build-push-action@v6
+      with:
+          push: true
+          tags: csassis/coleta-docker:latest
