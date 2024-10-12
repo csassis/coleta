@@ -37,10 +37,7 @@ jobs:
       run: docker tag coleta-docker:latest csassis/coleta:latest
 
     - name: Login to Docker Hub
-      uses: docker/login-action@v3
-      with:
-          username: csassis
-          password: dckr_pat_oBMQLENabFaMo9fVrtaRYVqTfE0
-
+      run: echo dckr_pat_oBMQLENabFaMo9fVrtaRYVqTfE0 | docker login -u csassis  --password-stdin
+      
     - name: Push da imagem latest do coleta-docker
       run: docker push coleta-docker:latest
