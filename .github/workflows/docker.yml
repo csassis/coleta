@@ -43,7 +43,7 @@ jobs:
         password: dckr_pat_ErVM1L0m01HLeYqWuGPRTjGXQrM
 
     - name: Tag
-      run: docker tag local_tag csassis/coleta-docker:latest
+      run: docker tag csassis/coleta-docker:latest
     
     - name: Push
       run: docker push csassis/coleta-docker:latest
