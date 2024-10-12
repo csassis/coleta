@@ -1,6 +1,8 @@
-FROM openjdk:17-oracle
-VOLUME /tmp
-ADD /home/runner/.m2/repository/com/assis/coleta/0.0.1-SNAPSHOT/coleta-0.0.1-SNAPSHOT.jar backend.jar
-RUN sh -c 'touch /backend.jar'
-EXPOSE 8080
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/;/urandom","-jar","/backend.jar"]
+FROM openjdk:17
+FROM maven:3.8-jdk-11 as maven_build
+COPY pom.xml pom.xml
+COPY src src
+RUN mvn clean package
+ARG JAR_FILE=target/*.jar
+COPY --from=maven_build /path/to/target/*.jar /app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
