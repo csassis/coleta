@@ -40,7 +40,7 @@ jobs:
       uses: docker/login-action@v3
       with:
           username: csassis
-          password: dckr_pat_ErVM1L0m01HLeYqWuGPRTjGXQrM
+          password: dckr_pat_BioftHt3LjEI768tnFFooROcQQg
 
     - name: Push da imagem para o dockerhub
       run: docker push coleta-docker:latest
