@@ -38,7 +38,7 @@ jobs:
 
     - name: Build & Push Image
       run: |
-          echo dckr_pat_oBMQLENabFaMo9fVrtaRYVqTfE0 | docker login -u csassis  --password-stdin
+          echo dckr_pat_oBMQLENabFaMo9fVrtaRYVqTfE0 | docker login -u csassis --password-stdin
           docker build -t coleta-docker .
-          docker tag coleta-docker:latest csassis/coleta:latest
-          docker push coleta-docker:latest
+          docker tag coleta-docker:latest csassis/coleta-docker:latest
+          docker push csassis/coleta-docker:latest
