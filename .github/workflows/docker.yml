@@ -42,8 +42,5 @@ jobs:
           username: csassis
           password: dckr_pat_oBMQLENabFaMo9fVrtaRYVqTfE0
 
-    - name: Build and push
-      uses: docker/build-push-action@v6
-      with:
-          push: true
-          tags: csassis/coleta-docker:latest
+    - name: Push da imagem latest do coleta-docker
+      run: docker push coleta-docker:latest
