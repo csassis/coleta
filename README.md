@@ -11,6 +11,7 @@
  - Rest Api
 
 #### Fluxo estrutural 
+![Fluxo da imagem](coleta-flow.png)
 
 
 #### Use Cases
