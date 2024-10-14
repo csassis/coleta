@@ -9,6 +9,8 @@
  - Github actions
  - Docker
  - Rest Api
+ - Swagger
+ - Open Api
 
 #### Fluxo estrutural 
 ![Fluxo da imagem](coleta-flow.png)
@@ -20,17 +22,4 @@
  - Listagem de agendamentos realizados
  - Exclusão ou alteração de um agendamento
 
-#### Exemplos de api
-
-Exemplo de criação de uma agendamento
-```
-curl --location 'http://localhost:8080/agendamento' \
---header 'Content-Type: application/json' \
---data '  {
-    "cliente": "Cliente loe",
-    "material": "Latinha",
-    "cidade": "SP",
-    "quantidade": 12,
-    "data": null
-}'
-```
+![Documentação](swagger.png)
