@@ -17,4 +17,8 @@ jobs:
         port: 443
         command_timeout: 30m
         script: | 
-          echo "Nice Job!!!"
+          docker stop $(docker ps -a -q)
+          docker rmi -f csassis/coleta-docker
+          docker run -d -p 8080:8080 csassis/coleta-docker:latest
+
+         
