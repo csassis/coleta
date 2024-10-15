@@ -34,7 +34,7 @@ Rodar local:
  - Acesso o endereço: http://localhost:8080/
  - Para acessar a base de dados: http://localhost:8080/h2-console
  - JdbcUrl: <b>jdbc:h2:mem:testdb</b> login: <b>sa </b>Password: <b>password </b>
- <p align="center"><img src="swagger_v2.png" width="50%"/>
+ <p align="center"><img src="h2-database.png" width="50%"/>
 
 
 ______
