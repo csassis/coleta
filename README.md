@@ -12,15 +12,28 @@
  - Swagger
  - Open Api
 
-#### Fluxo estrutural 
-![Fluxo da imagem](coleta-fluxo.png)
-
-
 #### Use Cases
 
  - Criação de agendamento
  - Listagem de agendamentos realizados
  - Exclusão ou alteração de um agendamento
+
+
+#### Fluxo estrutural 
+![Fluxo da imagem](coleta-fluxo.png)
+
+#### Stage 
+![Logs](stage_logs.png)
+______
+
+![Topologia](stage_topology.png)
+
+
+#### Production 
+![Logs](production_logs.png)
+______
+
+![Topologia](production_topology.png)
 
 ![Documentação](swagger.png)
 
