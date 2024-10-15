@@ -47,7 +47,7 @@ Apenas rodar basta ter o docker instalado e executar o comando abaixo:
 #### Documentação das apis
 
 Documentação da Api com Swagger
-<p align="center"><img src="swagger_v2.png" width="70%"/>
+<p align="center"><img src="swagger_v2.png" width="55%"/>
 
 ## Docker hub
 ```
@@ -63,7 +63,7 @@ ENTRYPOINT ["java","-jar","/target/app.jar"]
 https://hub.docker.com/repository/docker/csassis/coleta-docker/general
 
 Docker hub
-<p align="center"><img src="docker-hub.png" width="70%"/>
+<p align="center"><img src="docker-hub.png" width="55%"/>
                    
 ______
 
@@ -100,28 +100,28 @@ jobs:
 ```
 
 Fluxo do CI / CD
-<p align="center"><img src="coleta-fluxo.png" width="70%"/>
+<p align="center"><img src="coleta-fluxo.png" width="55%"/>
 
 Workflows executados
-<p align="center"><img src="workflows.png" width="70%"/>
+<p align="center"><img src="workflows.png" width="55%"/>
 
 ______
 
 #### Stage 
 
 Logs da app em Stage
-<p align="center"><img src="stage_logs.png" width="70%"/>
+<p align="center"><img src="stage_logs.png" width="55%"/>
 
 ______
 
 Topologia da app em Stage
-<p align="center"><img src="stage_topology.png" width="70%"/>
+<p align="center"><img src="stage_topology.png" width="55%"/>
 
 ______
 
 #### Production 
 Logs da app em Produção
-<p align="center"><img src="production_logs.png" width="70%"/>
+<p align="center"><img src="production_logs.png" width="55%"/>
 
 ______
 
