@@ -28,9 +28,18 @@ ______
 ______
 
 #### Usando o projeto
+Rodar local:
+ - Importe o projeto maven com Intellij/Eclipse
+ - execute o comando: ```mvn spring-boot:run```
+ - Acesso o endereço: http://localhost:8080/
+ - Para acessar a base de dados: http://localhost:8080/h2-console
+ - JdbcUrl: <b>jdbc:h2:mem:testdb</b> login: <b>sa </b>Password: <b>password </b>
+ <p align="center"><img src="swagger_v2.png" width="50%"/>
 
-Necessário ter o docker instalado na máquina
 
+______
+
+Apenas rodar basta ter o docker instalado e executar o comando abaixo:
 ```
   docker run -d -p 8080:8080 csassis/coleta-docker:latest
 ```
