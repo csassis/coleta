@@ -2,19 +2,19 @@ name: Deploy stage
 on:
   push:
     branches: [ "main" ]    
-jobs:
-  ssh-to-ec2:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
 
-    - name: Set up SSH key
-      uses: LuisEnMarroquin/setup-ssh-action@v2.0.0
+jobs:
+  run_example_job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - name: print out example job
+      uses: appleboy/ssh-action@v0.1.10
       with:
-        ORIGIN: ${{ secrets.STAGE }}
-        SSHKEY: ${{ secrets.SSH_STAGE }}
-        NAME: production
-        PORT: 22
-        USER: csassis
-    - run: ssh production "ls -la;id; echo hehe > h.txt "
+        host: ${{ secrets.STAGE }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY_STAGE }}
+        port: 443
+        command_timeout: 30m
+        script: | 
+          echo "Nice Job!!!"
