@@ -46,9 +46,26 @@ Apenas rodar basta ter o docker instalado e executar o comando abaixo:
 
 #### Documentação das apis
 
-Documentação da Api com Swagger
+Documentação da Api com Swagger (pode ser usado para executar as ações)
 <p align="center"><img src="swagger_v2.png" width="55%"/>
 
+______
+
+Exemplo de criação de agendamento usando curl:
+```
+ curl -X 'POST' \
+   'http://localhost:8080/agendamento' \
+   -H 'Content-Type: application/json' \
+   -d '{
+   "cliente": "Empresas silva",
+   "material": "Variados",
+   "cidade": "São Paulo",
+   "quantidade": 200,
+   "data": "2024-10-29"
+ }'
+```
+
+#### 
 ## Docker hub
 ```
 FROM openjdk:17-oracle as builder
