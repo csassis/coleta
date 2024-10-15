@@ -123,6 +123,14 @@ Workflows executados
 
 ______
 
+#### Resources 
+
+Todos os recursos utilizados na azzure
+<p align="center"><img src="resources.png" width="55%"/>
+
+______
+
+
 #### Stage 
 
 Logs da app em Stage
