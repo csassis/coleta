@@ -13,8 +13,8 @@ jobs:
       with:
         host: ${{ secrets.STAGE }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
+        key: ${{ secrets.KEY_STAGE }}
+        port: 443
         command_timeout: 30m
         script: | 
           echo "Nice Job!!!"
