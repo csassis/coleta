@@ -13,7 +13,7 @@
  - Open Api
 
 #### Fluxo estrutural 
-![Fluxo da imagem](coleta-flow.png)
+![Fluxo da imagem](coleta-fluxo.png)
 
 
 #### Use Cases
