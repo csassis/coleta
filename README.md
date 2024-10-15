@@ -1,5 +1,8 @@
-#### coleta
- Coleta é uma api que disponibiliza o agendamento e a execução de coletas.
+## Coleta Api
+
+Coleta é uma api que disponibiliza o agendamento e a execução de coletas.
+
+______
 
 #### Tecnologia
  - Java 17
@@ -8,9 +11,12 @@
  - Tomcat
  - Github actions
  - Docker
+ - Docker hub
  - Rest Api
  - Swagger
  - Open Api
+
+______
 
 #### Use Cases
 
@@ -19,10 +25,26 @@
  - Exclusão ou alteração de um agendamento
  - Agendamentos de hoje
 
+______
+
 ![Documentação](swagger_v2.png)
 
+## Docker hub
+```
+FROM openjdk:17-oracle as builder
+#WORKDIR build
+EXPOSE 8080
+RUN mkdir target
+ARG JAR_FILE=./target/*.jar
+COPY ${JAR_FILE} target/app.jar
+ENTRYPOINT ["java","-jar","/target/app.jar"]
+```
 
-#### Fluxo estrutural 
+![Docker hub registry](docker-hub.png)
+
+______
+
+## Fluxo estrutural 
 ![Fluxo da imagem](coleta-fluxo.png)
 
 #### Stage 
@@ -31,7 +53,7 @@ ______
 
 ![Topologia](stage_topology.png)
 
-
+______
 #### Production 
 ![Logs](production_logs.png)
 ______
