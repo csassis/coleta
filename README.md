@@ -17,6 +17,9 @@
  - Criação de agendamento
  - Listagem de agendamentos realizados
  - Exclusão ou alteração de um agendamento
+ - Agendamentos de hoje
+
+![Documentação](swagger_v2.png)
 
 
 #### Fluxo estrutural 
@@ -34,6 +37,3 @@ ______
 ______
 
 ![Topologia](production_topology.png)
-
-![Documentação](swagger.png)
-
