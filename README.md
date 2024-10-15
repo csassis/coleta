@@ -31,11 +31,10 @@ ______
 Rodar local:
  - Importe o projeto maven com Intellij/Eclipse
  - execute o comando: ```mvn spring-boot:run```
- - Acesso o endereço: http://localhost:8080/
- - Para acessar a base de dados: http://localhost:8080/h2-console
+ - Acesso o endereço: http://20.206.160.37:8080/
+ - Para acessar a base de dados: http://20.206.160.37:8080/h2-console
  - JdbcUrl: <b>jdbc:h2:mem:testdb</b> login: <b>sa </b>Password: <b>password </b>
  <p align="center"><img src="h2-database.png" width="50%"/>
-
 
 ______
 
@@ -54,7 +53,7 @@ ______
 Exemplo de criação de agendamento usando curl:
 ```
  curl -X 'POST' \
-   'http://localhost:8080/agendamento' \
+   'http://20.206.160.37:8080/agendamento' \
    -H 'Content-Type: application/json' \
    -d '{
    "cliente": "Empresas silva",
