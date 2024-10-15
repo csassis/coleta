@@ -20,4 +20,19 @@ public class AgendamentoService {
     public long count() {
         return repository.count();
     }
+
+    public void update(com.assis.coleta.Agendamento parametro) {
+        repository.deleteById(parametro.getId());
+        repository.save(parametro);
+    }
+
+    public Iterable<com.assis.coleta.Agendamento> findAgendamentos(java.time.LocalDate dateParam) {
+        java.util.List<Agendamento> agendamentosDeHoje = new java.util.ArrayList<>();
+        for (com.assis.coleta.Agendamento agendamento : findAll()) {
+            if(agendamento.getData() != null && agendamento.getData().isEqual(dateParam)) {
+                agendamentosDeHoje.add(agendamento);
+            }
+        }
+        return agendamentosDeHoje;
+    }
 }
