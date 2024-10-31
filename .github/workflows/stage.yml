@@ -1,0 +1,24 @@
+name: Deploy stage
+on:
+  push:
+    branches: [ "main" ]    
+
+jobs:
+  run_example_job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - name: Login ssh stage
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.STAGE }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY_STAGE }}
+        port: 443
+        command_timeout: 30m
+        script: | 
+          docker stop $(docker ps -a -q)
+          docker rmi -f csassis/coleta-docker
+          docker run -d -p 8080:8080 csassis/coleta-docker:latest
+
+         

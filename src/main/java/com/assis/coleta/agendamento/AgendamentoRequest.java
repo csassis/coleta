@@ -1,23 +1,20 @@
-package com.assis.coleta;
+package com.assis.coleta.agendamento;
 
-@jakarta.persistence.Entity
-public class Agendamento {
+public class AgendamentoRequest {
 
-    @jakarta.persistence.Id
-    @jakarta.persistence.GeneratedValue(strategy = jakarta.persistence.GenerationType.AUTO)
-    private int id;
     private String cliente;
     private String material;
     private String cidade;
     private int quantidade;
-    private java.time.LocalDate data;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public Agendamento convertToAgendamento() {
+        Agendamento agendamentoModel = new Agendamento();
+        agendamentoModel.setData(java.time.LocalDate.now());
+        agendamentoModel.setCliente(cliente);
+        agendamentoModel.setMaterial(material);
+        agendamentoModel.setQuantidade(quantidade);
+        agendamentoModel.setCidade(cidade);
+        return agendamentoModel;
     }
 
     public String getCliente() {
@@ -50,13 +47,5 @@ public class Agendamento {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
-    }
-
-    public java.time.LocalDate getData() {
-        return data;
-    }
-
-    public void setData(java.time.LocalDate data) {
-        this.data = data;
     }
 }
