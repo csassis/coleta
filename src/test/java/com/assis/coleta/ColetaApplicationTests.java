@@ -3,11 +3,13 @@ package com.assis.coleta;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.*;
 
+@org.junit.jupiter.api.Nested
 @SpringBootTest
 class ColetaApplicationTests {
 
+
     @org.springframework.beans.factory.annotation.Autowired
-    private AgendamentoService agendamentoService;
+    private com.assis.coleta.agendamento.AgendamentoService agendamentoService;
 
     com.github.javafaker.Faker faker = new com.github.javafaker.Faker();
 
@@ -17,7 +19,7 @@ class ColetaApplicationTests {
 
     @Test
     void saveAgendamentoTest() {
-        com.assis.coleta.Agendamento agendamento = new com.assis.coleta.Agendamento();
+        com.assis.coleta.agendamento.Agendamento agendamento = new com.assis.coleta.agendamento.Agendamento();
         agendamento.setCliente(faker.name().name());
         agendamento.setCidade(faker.country().capital());
         agendamento.setMaterial(faker.animal().name());
@@ -27,8 +29,8 @@ class ColetaApplicationTests {
     }
 
     @Test
-    void findAgendamentoTest(){
-        com.assis.coleta.Agendamento agendamentoUm = new com.assis.coleta.Agendamento();
+    void findAgendamentoTest() {
+        com.assis.coleta.agendamento.Agendamento agendamentoUm = new com.assis.coleta.agendamento.Agendamento();
         agendamentoUm.setCliente(faker.name().name());
         agendamentoUm.setCidade(faker.country().capital());
         agendamentoUm.setMaterial(faker.animal().name());
@@ -36,7 +38,7 @@ class ColetaApplicationTests {
         agendamentoUm.setData(java.time.LocalDate.now());
         agendamentoService.save(agendamentoUm);
 
-        com.assis.coleta.Agendamento agendamentoDois = new com.assis.coleta.Agendamento();
+        com.assis.coleta.agendamento.Agendamento agendamentoDois = new com.assis.coleta.agendamento.Agendamento();
         agendamentoDois.setCliente(faker.name().name());
         agendamentoDois.setCidade(faker.country().capital());
         agendamentoDois.setMaterial(faker.animal().name());
@@ -44,7 +46,7 @@ class ColetaApplicationTests {
         agendamentoDois.setData(java.time.LocalDate.now());
         agendamentoService.save(agendamentoDois);
 
-        java.util.Iterator<Agendamento> agendamentos = agendamentoService.findAll().iterator();
+        java.util.Iterator<com.assis.coleta.agendamento.Agendamento> agendamentos = agendamentoService.findAllAgendamentos().iterator();
 
         org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
         org.springframework.util.Assert.notNull(agendamentos.next(), "List sem items");
